@@ -17,14 +17,43 @@ class _HomePage extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'Body Text',
-        ),
+      body: const Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Box(),
+                Box(),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Box(),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Box(),
+                Box(),
+              ],
+            ),
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+    );
+  }
+}
+
+class Box extends StatelessWidget {
+  const Box({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(15),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        color: Color(0xFF1D1E33),
       ),
     );
   }
