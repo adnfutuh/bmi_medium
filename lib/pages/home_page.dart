@@ -1,4 +1,11 @@
+import 'package:bmi_medium/pages/home_page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+double bottomContainerHeight = 80.0;
+Color darkPurple = const Color(0XFF1D1E33);
+Color darkPink = const Color(0xffeb1555);
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,27 +24,79 @@ class _HomePage extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Row(
               children: [
-                Box(),
-                Box(),
+                Box(
+                  color: darkPurple,
+                  boxChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.mars,
+                        color: Colors.white,
+                        size: 70,
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'MALE',
+                      )
+                    ],
+                  ),
+                ),
+                Box(
+                  color: darkPurple,
+                  boxChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.venus,
+                        color: Colors.white,
+                        size: 70,
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'FEMALE',
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
           Expanded(
-            child: Box(),
+            child: Box(
+              color: darkPurple,
+              boxChild: null,
+            ),
           ),
           Expanded(
             child: Row(
               children: [
-                Box(),
-                Box(),
+                Box(
+                  color: darkPurple,
+                  boxChild: null,
+                ),
+                Box(
+                  color: darkPurple,
+                  boxChild: null,
+                ),
               ],
             ),
           ),
+          Container(
+            height: bottomContainerHeight,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: darkPink,
+            ),
+          )
         ],
       ),
     );
