@@ -126,12 +126,15 @@ class _HomePage extends State<HomePage> {
             ),
           ),
           Container(
-            height: 80.0,
+            height: 70.0,
             width: double.infinity,
             decoration: BoxDecoration(
               color: primaryColor,
             ),
-          )
+            child: const Center(
+              child: Text('calculate'),
+            ),
+          ),
         ],
       ),
     );
