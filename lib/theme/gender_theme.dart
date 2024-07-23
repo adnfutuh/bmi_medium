@@ -1,6 +1,7 @@
 import 'package:bmi_medium/constans/color.dart';
 import 'package:bmi_medium/constans/gender.dart';
-import 'package:flutter/material.dart';
+
+import '../models/gender_themedata.dart';
 
 class GenderTheme {
   final Gender? gender;
@@ -23,10 +24,4 @@ class GenderTheme {
         return _default;
     }
   }
-}
-
-class GenderThemeData {
-  final Color primaryColor;
-  final Color secondaryColor;
-  GenderThemeData({required this.primaryColor, required this.secondaryColor});
 }
