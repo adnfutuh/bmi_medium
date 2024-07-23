@@ -1,7 +1,7 @@
 import 'package:bmi_medium/components/box.dart';
 import 'package:bmi_medium/components/icon_text.dart';
 import 'package:bmi_medium/components/round_button.dart';
-import 'package:bmi_medium/components/style.dart';
+import 'package:bmi_medium/theme/theme.dart';
 import 'package:bmi_medium/constans/color.dart';
 import 'package:bmi_medium/constans/gender.dart';
 import 'package:bmi_medium/theme/gender_theme.dart';
@@ -91,7 +91,7 @@ class _HomePage extends State<HomePage> {
                     children: [
                       Text(
                         heightBody.toString(),
-                        style: valTxtStyle,
+                        style: MyTheme().valTxtStyle,
                       ),
                       const Text(
                         'cm',
@@ -126,7 +126,7 @@ class _HomePage extends State<HomePage> {
                       const Text('WEIGHT'),
                       Text(
                         weightBody.toString(),
-                        style: valTxtStyle,
+                        style: MyTheme().valTxtStyle,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -165,7 +165,7 @@ class _HomePage extends State<HomePage> {
                       const Text('AGE'),
                       Text(
                         age.toString(),
-                        style: valTxtStyle,
+                        style: MyTheme().valTxtStyle,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

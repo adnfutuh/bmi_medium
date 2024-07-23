@@ -6,12 +6,14 @@ class GenderTheme {
   final Gender? gender;
   GenderTheme(this.gender);
 
-  final Theme _default = Theme(primaryColor: purple, secondaryColor: purple);
-  final Theme _male = Theme(primaryColor: blue, secondaryColor: lightBlue);
-  final Theme _female =
-      Theme(primaryColor: darkPink, secondaryColor: lightPink);
+  final GenderThemeData _default =
+      GenderThemeData(primaryColor: purple, secondaryColor: purple);
+  final GenderThemeData _male =
+      GenderThemeData(primaryColor: blue, secondaryColor: lightBlue);
+  final GenderThemeData _female =
+      GenderThemeData(primaryColor: darkPink, secondaryColor: lightPink);
 
-  Theme get color {
+  GenderThemeData get color {
     switch (gender) {
       case Gender.male:
         return _male;
@@ -23,8 +25,8 @@ class GenderTheme {
   }
 }
 
-class Theme {
+class GenderThemeData {
   final Color primaryColor;
   final Color secondaryColor;
-  Theme({required this.primaryColor, required this.secondaryColor});
+  GenderThemeData({required this.primaryColor, required this.secondaryColor});
 }
