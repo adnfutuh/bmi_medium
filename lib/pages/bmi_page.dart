@@ -1,6 +1,7 @@
 import 'package:bmi_medium/components/box.dart';
 import 'package:bmi_medium/components/icon_text.dart';
 import 'package:bmi_medium/components/round_button.dart';
+import 'package:bmi_medium/pages/result_page.dart';
 import 'package:bmi_medium/theme/theme.dart';
 import 'package:bmi_medium/constans/color.dart';
 import 'package:bmi_medium/constans/gender.dart';
@@ -198,14 +199,25 @@ class _HomePage extends State<HomePage> {
               ],
             ),
           ),
-          Container(
-            height: 70.0,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: primaryColor,
-            ),
-            child: const Center(
-              child: Text('calculate'),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(
+                      height: heightBody, weight: weightBody.toDouble()),
+                ),
+              );
+            },
+            child: Container(
+              height: 70.0,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: primaryColor,
+              ),
+              child: const Center(
+                child: Text('calculate'),
+              ),
             ),
           ),
         ],
